@@ -1,0 +1,12 @@
+# Explicit CPU-only baseline. Does NOT run the full three-model experiment.
+extends: default.yaml
+embedding:
+  enabled: false
+retrieval:
+  max_trials: 2
+matching:
+  models: [logistic, boosted_trees]
+  logistic:
+    max_trials: 2
+  boosted_trees:
+    max_trials: 2
